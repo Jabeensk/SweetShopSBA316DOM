@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Dessert Order System</title>
+</head>
+
+<body>
+  <img src="https://media.istockphoto.com/id/1282277355/vector/homemade-logo-template-element-with-cute-female-chef-with-holding-plate-and-croissant-love.jpg?s=612x612&w=0&k=20&c=4E44LBbd28SBE7gueWAiktcsreza6MJg7p-jgmRvl6c=" width="150"    alt="Company Logo" id="companyLogo">
+
+    <div id="navbar-container">
+        
+          <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            
+        </nav>
+            <div id="navbar-content">
+                <include src="navbar.html"></include>
+                
+            </div>
+        </div>
+  <hr> 
+  <div class="main-content">
+    <h1>Welcome to Sweet Shop!</h1>
+   
+  <div id="dessertMenu">
+    
+    <div class="dessert-item" data-name="Cake" data-price="15.99">
+        <img src="https://media.istockphoto.com/id/585303220/photo/sprinkles.jpg?s=612x612&w=is&k=20&c=JrTeZ6X13WA8ImUHrAEX8T8sAiw6fWorKvGoP_pwfCk=" width="200"   alt="Cup Cakes">
+        <p>Cup Cake - $15.99 for 12</p>
+    </div>
+    
+    <div class="dessert-item" data-name="Ice Cream" data-price="8.99">
+        <img src="https://media.istockphoto.com/id/905879330/photo/assorted-glazed-donut.jpg?s=612x612&w=0&k=20&c=1vih5I2DS_KJDQzoML9QuI50tS1FRAR1X7Z1orPxpiU=" width="200" alt="Donuts">
+        <p>Donut - $8.99 for 12</p>
+    </div>
+    
+    <div class="dessert-item" data-name="Cookies" data-price="5.99">
+        <img src="https://media.istockphoto.com/id/1294238220/photo/vegan-homemade-chocolate-chunk-cookies-on-cooling-rack-flat-lay.jpg?s=612x612&w=0&k=20&c=Vk36zx_q_4hSqtLvq1EozhxTJm1p3ckAczslharNjY4=" width="200"   alt="Cookies">
+        <p>Cookies - $5.99 for 12</p>
+    </div>
+
+</div>
+
+    <div id="app">
+        <form id="orderForm">
+          <label for="dessert">Choose a Dessert:</label>
+          <select id="dessert" required>
+              <option value="" disabled selected>Select a dessert</option>
+              <option value="Cup cakes">Cup Cakes</option>
+              <option value="Donuts">Donuts</option>
+              <option value="Cookies">Cookies</option>
+          </select>
+          
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" min="1" required>
+          
+          <button type="button" id="submitOrder">Place Order</button>
+        </form>
+        <div id="orderSummary"></div>
+    </div>
+    
+    
+  
+</body>
+</html>
